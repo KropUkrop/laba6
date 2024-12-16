@@ -4,58 +4,58 @@
 #include "Zachetka.h"
 
 int main() {
-    std::vector<Documents*> documents; // Массив указателей на базовый класс
+    std::vector<Documents*> documents; // РњР°СЃСЃРёРІ СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° Р±Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ
     int choice;
 
     while (true) {
-        std::cout << "\nМеню:\n";
-        std::cout << "1. Добавить свидетельство ЕГЭ\n";
-        std::cout << "2. Добавить зачётную книжку\n";
-        std::cout << "3. Отобразить все документы\n";
-        std::cout << "4. Изменить документ\n";
-        std::cout << "5. Вычислить количество действительных документов\n";
-        std::cout << "6. Выход\n";
-        std::cout << "Выберите действие: ";
+        std::cout << "\nРњРµРЅСЋ:\n";
+        std::cout << "1. Р”РѕР±Р°РІРёС‚СЊ СЃРІРёРґРµС‚РµР»СЊСЃС‚РІРѕ Р•Р“Р­\n";
+        std::cout << "2. Р”РѕР±Р°РІРёС‚СЊ Р·Р°С‡С‘С‚РЅСѓСЋ РєРЅРёР¶РєСѓ\n";
+        std::cout << "3. РћС‚РѕР±СЂР°Р·РёС‚СЊ РІСЃРµ РґРѕРєСѓРјРµРЅС‚С‹\n";
+        std::cout << "4. РР·РјРµРЅРёС‚СЊ РґРѕРєСѓРјРµРЅС‚\n";
+        std::cout << "5. Р’С‹С‡РёСЃР»РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ\n";
+        std::cout << "6. Р’С‹С…РѕРґ\n";
+        std::cout << "Р’С‹Р±РµСЂРёС‚Рµ РґРµР№СЃС‚РІРёРµ: ";
         std::cin >> choice;
 
         if (choice == 1) {
             std::string owner, date;
             int score;
-            std::cout << "Введите имя владельца: ";
+            std::cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ РІР»Р°РґРµР»СЊС†Р°: ";
             std::cin >> owner;
-            std::cout << "Введите дату выдачи: ";
+            std::cout << "Р’РІРµРґРёС‚Рµ РґР°С‚Сѓ РІС‹РґР°С‡Рё: ";
             std::cin >> date;
-            std::cout << "Введите баллы ЕГЭ: ";
+            std::cout << "Р’РІРµРґРёС‚Рµ Р±Р°Р»Р»С‹ Р•Р“Р­: ";
             std::cin >> score;
             documents.push_back(new EGE(owner, date, score));
         }
         else if (choice == 2) {
             std::string owner, date;
             int semesters;
-            std::cout << "Введите имя владельца: ";
+            std::cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ РІР»Р°РґРµР»СЊС†Р°: ";
             std::cin >> owner;
-            std::cout << "Введите дату выдачи: ";
+            std::cout << "Р’РІРµРґРёС‚Рµ РґР°С‚Сѓ РІС‹РґР°С‡Рё: ";
             std::cin >> date;
-            std::cout << "Введите количество семестров: ";
+            std::cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРµРјРµСЃС‚СЂРѕРІ: ";
             std::cin >> semesters;
             documents.push_back(new Zachetka(owner, date, semesters));
         }
         else if (choice == 3) {
             for (size_t i = 0; i < documents.size(); ++i) {
-                std::cout << "\nДокумент #" << i + 1 << ":\n";
+                std::cout << "\nР”РѕРєСѓРјРµРЅС‚ #" << i + 1 << ":\n";
                 documents[i]->display();
             }
         }
         else if (choice == 4) {
             int index;
-            std::cout << "Введите номер документа: ";
+            std::cout << "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РґРѕРєСѓРјРµРЅС‚Р°: ";
             std::cin >> index;
             if (index > 0 && index <= static_cast<int>(documents.size())) {
-                documents[index - 1]->setOwner("Новый владелец");
-                std::cout << "Владелец изменён.\n";
+                documents[index - 1]->setOwner("РќРѕРІС‹Р№ РІР»Р°РґРµР»РµС†");
+                std::cout << "Р’Р»Р°РґРµР»РµС† РёР·РјРµРЅС‘РЅ.\n";
             }
             else {
-                std::cout << "Неверный номер!\n";
+                std::cout << "РќРµРІРµСЂРЅС‹Р№ РЅРѕРјРµСЂ!\n";
             }
         }
         else if (choice == 5) {
@@ -64,18 +64,18 @@ int main() {
                 if (doc->isValid())
                     valid_count++;
             }
-            std::cout << "Количество действительных документов: " << valid_count << std::endl;
+            std::cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ: " << valid_count << std::endl;
         }
         else if (choice == 6) {
             break;
         }
         else {
-            std::cout << "Неверный выбор!\n";
+            std::cout << "РќРµРІРµСЂРЅС‹Р№ РІС‹Р±РѕСЂ!\n";
         }
     }
 
     for (auto doc : documents)
-        delete doc; // Освобождение памяти
+        delete doc; // РћСЃРІРѕР±РѕР¶РґРµРЅРёРµ РїР°РјСЏС‚Рё
 
     return 0;
 }
