@@ -9,9 +9,9 @@ private:
 
 public:
     EGE(const std::string& owner, const std::string& issue_date, int score);
-    void display() const override; // Переопределение виртуального метода
-    bool isValid() const override; // Реализация проверки действительности
-    void updateScore(int newScore); // Собственный метод
+    void display() const override; // РџРµСЂРµРѕРїСЂРµРґРµР»РµРЅРёРµ РІРёСЂС‚СѓР°Р»СЊРЅРѕРіРѕ РјРµС‚РѕРґР°
+    bool isValid() const override; // Р РµР°Р»РёР·Р°С†РёСЏ РїСЂРѕРІРµСЂРєРё РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕСЃС‚Рё
+    void updateScore(int newScore); // РЎРѕР±СЃС‚РІРµРЅРЅС‹Р№ РјРµС‚РѕРґ
 };
 
 #endif // EGE_H
