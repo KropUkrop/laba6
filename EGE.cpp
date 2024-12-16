@@ -5,11 +5,11 @@ EGE::EGE(const std::string& owner, const std::string& issue_date, int score)
 
 void EGE::display() const {
     Documents::display();
-    std::cout << "¡‡ÎÎ˚ ≈√›: " << exam_score << std::endl;
+    std::cout << "–ë–∞–ª–ª—ã –ï–ì–≠: " << exam_score << std::endl;
 }
 
 bool EGE::isValid() const {
-    return exam_score >= 50; // ”ÒÎÓ‚ËÂ ‰ÂÈÒÚ‚ËÚÂÎ¸ÌÓÒÚË
+    return exam_score >= 50; // –£—Å–ª–æ–≤–∏–µ –¥–µ–π—Å—Ç–≤–∏—Ç–µ–ª—å–Ω–æ—Å—Ç–∏
 }
 
 void EGE::updateScore(int newScore) {
