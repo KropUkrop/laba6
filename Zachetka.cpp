@@ -5,7 +5,7 @@ Zachetka::Zachetka(const std::string& owner, const std::string& issue_date, int 
 
 void Zachetka::display() const {
     Documents::display();
-    std::cout << "Êîëè÷åñòâî ñåìåñòðîâ: " << semester_count << std::endl;
+    std::cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐµÐ¼ÐµÑÑ‚Ñ€Ð¾Ð²: " << semester_count << std::endl;
 }
 
 bool Zachetka::isValid() const {
