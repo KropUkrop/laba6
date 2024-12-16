@@ -13,11 +13,11 @@ public:
     Documents(const std::string& owner, const std::string& issue_date);
     virtual ~Documents() {}
 
-    virtual void display() const; // Виртуальный метод для отображения информации
+    virtual void display() const; // Р’РёСЂС‚СѓР°Р»СЊРЅС‹Р№ РјРµС‚РѕРґ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РёРЅС„РѕСЂРјР°С†РёРё
     const std::string& getOwner() const;
     void setOwner(const std::string& newOwner);
 
-    virtual bool isValid() const = 0; // Чисто виртуальная функция
+    virtual bool isValid() const = 0; // Р§РёСЃС‚Рѕ РІРёСЂС‚СѓР°Р»СЊРЅР°СЏ С„СѓРЅРєС†РёСЏ
 };
 
 #endif // DOCUMENTS_H
