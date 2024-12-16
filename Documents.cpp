@@ -4,7 +4,7 @@ Documents::Documents(const std::string& owner, const std::string& issue_date)
     : owner(owner), issue_date(issue_date) {}
 
 void Documents::display() const {
-    std::cout << "Âëàäåëåö: " << owner << "\nÄàòà âûäà÷è: " << issue_date << std::endl;
+    std::cout << "Ð’Ð»Ð°Ð´ÐµÐ»ÐµÑ†: " << owner << "\nÐ”Ð°Ñ‚Ð° Ð²Ñ‹Ð´Ð°Ñ‡Ð¸: " << issue_date << std::endl;
 }
 
 const std::string& Documents::getOwner() const {
